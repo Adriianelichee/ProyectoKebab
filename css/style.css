@@ -1,0 +1,49 @@
+
+#tablero {
+    border-collapse: collapse;
+    margin: 0 auto; /* Esto centrará la tabla horizontalmente */
+    width: 300px; /* Asumiendo que cada celda tiene 100px de ancho */
+}
+
+#tablero td {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #333;
+}
+
+#tablero td:hover {
+    background-color: #f0f0f0;
+}
+
+#juegan {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.jugador {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 10px;
+    color :#333;
+}
+
+.turno {
+    font-weight: bold;
+    color: red;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
