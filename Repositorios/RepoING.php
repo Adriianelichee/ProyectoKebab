@@ -9,7 +9,6 @@ class RepoIng implements RepoCrud{
 
     //METODOS CRUD
     public function create($ingrediente) {
-        $this->conexion = Conexion::getConection();
         $name = $ingrediente->getName();
         $price = $ingrediente->getPrice();
         $stmt = $this->conexion->prepare("SELECT * FROM ingredients WHERE name = :name");
@@ -110,7 +109,7 @@ class RepoIng implements RepoCrud{
 
         if ($stmt->rowCount() > 0) {
             $fila = $stmt->fetch(PDO::FETCH_ASSOC);
-            return new Ingredient($fila['name'], $fila['price']);
+            return new Ingredient($fila['idIngredients'],$fila['name'], $fila['price']);
         } else{
             return null;
         }
