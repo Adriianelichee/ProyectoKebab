@@ -5,21 +5,17 @@ class User {
     private $username;
     private $password;
     private $rol;
-    private $address;
+    private $address = [];
     private $monedero;
     private $photo;
     private $email;
     private $cart;
 
-    public function __construct($username, $password, $rol, $address, $monedero, $photo, $email, $cart) {
+    public function __construct($username, $password, $rol, $email) {
         $this->username = $username;
         $this->password = $password;
         $this->rol = $rol;
-        $this->address = $address;
-        $this->monedero = $monedero;
-        $this->photo = $photo;
         $this->email = $email;
-        $this->cart = $cart;
     }
 
     public function getUserID() {
@@ -55,12 +51,12 @@ class User {
         $this->rol = $rol;
     }
     
-    public function getAddress() {
+    public function getAddresses() {
         return $this->address;
     }
     
-    public function setAddress($address) {
-        $this->address = $address;
+    public function addAddress($address) {
+        $this->address[] = $address;
     }
     
     public function getMonedero() {

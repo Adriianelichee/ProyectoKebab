@@ -6,8 +6,7 @@ class Allergens {
 
 
     //Constructor
-    public function __construct($idAllergens, $name, $photo) {
-        $this->idAllergens = $idAllergens;
+    public function __construct($name, $photo) {
         $this->name = $name;
         $this->photo = $photo;
     }
@@ -28,8 +27,8 @@ class Allergens {
     public function setPhoto($photo) {
         $this->photo = $photo;
     }
-    
-    public function setIdAllergens($idAllergens) {
-        $this->idAllergens = $idAllergens;
+    public function setName($name){
+        $this->name = $name;
     }
+    
 }

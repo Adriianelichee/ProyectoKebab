@@ -6,25 +6,20 @@ class Order {
     private $state;
     private $totalPrice;
     private $userID;
-    private $orderLines = [];
+    private $addressJson;
+    private $orderLinesJson;
 
-    public function __construct($idOrder, $datetime, $state, $totalPrice, User $user,$orderLines = []) {
+    public function __construct($idOrder, $datetime, $state, $totalPrice, User $user, $addressJson, $orderLinesJson) {
         $this->idOrder = $idOrder;
         $this->datetime = $datetime;
         $this->state = $state;
         $this->totalPrice = $totalPrice;
         $this->userID = $user->getUserID();
-        $this->orderLines = $orderLines;
+        $this->addressJson = $addressJson;
+        $this->orderLinesJson = $orderLinesJson;
     }
 
     //GETTERS AND SETTERS
-    public function getOrderLines() {
-        return $this->orderLines;
-    }
-    
-    public function addOrderLine(OrderLine $orderLine) {
-        $this->orderLines[] = $orderLine;
-    }
     public function getIdOrder() {
         return $this->idOrder;
     }
@@ -65,5 +60,20 @@ class Order {
     public function setUserID($userID) {
         $this->userID = $userID;
     }
-
+    
+    public function getAddressJson() {
+        return $this->addressJson;
+    }
+    
+    public function setAddressJson($addressJson) {
+        $this->addressJson = $addressJson;
+    }
+    
+    public function getOrderLinesJson() {
+        return $this->orderLinesJson;
+    }
+    
+    public function setOrderLinesJson($orderLinesJson) {
+        $this->orderLinesJson = $orderLinesJson;
+    }
 }

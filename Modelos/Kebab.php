@@ -4,13 +4,15 @@ class Kebab {
     private $idKebab;
     private $name;
     private $photo;
+    private $basePrice;
     private $ingredients = [];
 
     //Constructor
-    public function __construct($idKebab, $name, $photo) {
+    public function __construct($idKebab, $name, $photo, $basePrice) {
         $this->idKebab = $idKebab;
         $this->name = $name;
         $this->photo = $photo;
+        $this->basePrice = $basePrice;
     }
     //Getters and Setters
     public function getIngredients() {
@@ -43,6 +45,14 @@ class Kebab {
     
     public function setPhoto($photo) {
         $this->photo = $photo;
+    }
+    
+    public function getBasePrice() {
+        return $this->basePrice;
+    }
+    
+    public function setBasePrice($basePrice) {
+        $this->basePrice = $basePrice;
     }
 
     //Json

@@ -6,13 +6,15 @@ class OrderLine {
     private $stringJson;
     private $kebabs = [];
     private $quantity;
+    private $price;
 
     //Constructor
-    public function __construct($orderLineID, $orderID,$stringJson, $quantity){
+    public function __construct($orderLineID, $orderID,$stringJson, $quantity, $price) {
         $this->orderLineID = $orderLineID;
         $this->orderID = $orderID;
         $this->stringJson = $stringJson;
         $this->quantity = $quantity;
+        $this->price = $price;
     }
     
     //GETTERS AND SETTERS
@@ -54,6 +56,14 @@ class OrderLine {
     
     public function setQuantity($quantity) {
         $this->quantity = $quantity;
+    }
+    
+    public function getPrice() {
+        return $this->price;
+    }
+    
+    public function setPrice($price) {
+        $this->price = $price;
     }
 
 
